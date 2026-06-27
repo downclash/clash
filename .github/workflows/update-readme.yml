@@ -1,0 +1,33 @@
+name: Update README versions
+
+on:
+  schedule:
+    - cron: "35 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Update latest release versions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/update-readme.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add README.md
+          timestamp=$(date -u +"%Y-%m-%d %H:%M UTC")
+          git commit -m "docs: auto-update client versions (${timestamp})" || exit 0
+          git push
