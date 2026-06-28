@@ -1,5 +1,9 @@
 # Clash 官网导航（2026 最新版）
 
+> **⭐ 如果本项目对你有帮助，请点个 Star 支持一下！你的 Star 是我持续更新的动力！**
+>
+> **🍴 建议 Fork 本仓库，防止失联后找不到最新客户端下载地址。Fork 后你的仓库也会自动同步更新！**
+
 本站汇总 2026 年最新 Clash 网页版及各平台客户端下载地址。涵盖 Clash Verge Rev, Mihomo Party, Clash Mi 等热门分支，支持 Windows, macOS, Android (安卓), iOS 及 Linux 全系统。提供官网安装包备份及详细配置订阅教程
 
 - 👉 [机场推荐：100+ 高速节点，敏感时期高可用](https://a04.yfyn01.net/register?code=RAUI4SfP)
